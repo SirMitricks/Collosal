@@ -49,4 +49,36 @@ main{
             text-align: center;
         }
     }
+    .HS_twoButton{
+        width: 22.135vw;
+        height: 10.879%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        a{
+            width: 47.529%;
+            height: 100%;
+            border-radius: 3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            font-size: 1.6rem;
+            &:first-child{
+                background-color: #6016FC;
+                transition: 100ms;
+                &:hover{
+                    background-color: #4d12cc;
+                }
+            }
+            &:last-child{
+                background-color: rgba(255, 255, 255, 0.1);
+                &:hover{
+                    background-color: rgba(255, 255, 255, 0.05);
+                }
+            }
+        }
+        
+    }
 }

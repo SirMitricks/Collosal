@@ -22,7 +22,18 @@ const pool = new Pool({
 
 const PORT = 3000
 
-
+app.get('/api/client_development_driven', async(req, res) => {
+    try{
+        const result = await pool.query(
+            'SELECT * FROM client_development_driven ORDER BY id'
+        );
+        res.json(result.rows)
+    }
+    catch (err) {
+        console.error('Ошибка при запросе client_development_driven:', err)
+        res.status(500).json({ error: 'Не удалось получить данные из БД'})
+    }
+})
 
 
 
